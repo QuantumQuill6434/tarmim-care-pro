@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Tarmim Agency Branding (Saudi Green & White) */
+  --primary: #068641; /* Agency Green */
+  --primary-light: #0bb259;
+  --primary-dark: #045c2c;
+  
+  --background: #f8fafc; /* Sleek slate off-white */
+  --foreground: #0b0f19; /* Deep slate black */
+  
+  --card: #ffffff;
+  --card-foreground: #0b0f19;
+  
+  --muted: #64748b; /* Slate 500 */
+  --muted-light: #f1f5f9; /* Slate 100 */
+  --muted-border: #e2e8f0; /* Slate 200 */
+  
+  /* Status & Priority Colors (Clean hues without emojis) */
+  --status-open: #d97706; /* Rich Amber */
+  --status-open-bg: #fffbeb;
+  --status-inprogress: #2563eb; /* Cobalt Blue */
+  --status-inprogress-bg: #eff6ff;
+  --status-completed: #059669; /* Emerald Green */
+  --status-completed-bg: #ecfdf5;
+  
+  --priority-high: #dc2626; /* Crimson Red */
+  --priority-high-bg: #fef2f2;
+  --priority-medium: #d97706; /* Amber */
+  --priority-medium-bg: #fffbeb;
+  --priority-low: #64748b; /* Slate */
+  --priority-low-bg: #f1f5f9;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  
+  --color-app-bg: var(--background);
+  --color-app-fg: var(--foreground);
+  
+  --color-card: var(--card);
+  --color-card-fg: var(--card-foreground);
+  
+  --color-app-muted: var(--muted);
+  --color-app-muted-light: var(--muted-light);
+  --color-app-muted-border: var(--muted-border);
+  
+  --color-status-open: var(--status-open);
+  --color-status-open-bg: var(--status-open-bg);
+  --color-status-inprogress: var(--status-inprogress);
+  --color-status-inprogress-bg: var(--status-inprogress-bg);
+  --color-status-completed: var(--status-completed);
+  --color-status-completed-bg: var(--status-completed-bg);
+  
+  --color-priority-high: var(--priority-high);
+  --color-priority-high-bg: var(--priority-high-bg);
+  --color-priority-medium: var(--priority-medium);
+  --color-priority-medium-bg: var(--priority-medium-bg);
+  --color-priority-low: var(--priority-low);
+  --color-priority-low-bg: var(--priority-low-bg);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Outfit', var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom premium hover lifts and card layouts */
+.hover-lift {
+  transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.22s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -10px rgba(0, 95, 86, 0.08), 0 4px 12px -5px rgba(0, 95, 86, 0.03);
+}
+
+.luxury-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, #087f73 100%);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.6);
+}
+
+/* Custom modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
